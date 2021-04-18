@@ -2,8 +2,27 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/main.css'
 import { Logo } from '../assets/icon/icons.js'
+import $ from 'jquery';
 
 export default class Navbar extends Component {
+
+    componentDidMount() {
+        window.addEventListener("scroll", this.stickyNavbar);
+    }
+
+    stickyNavbar = () => {
+        const fixbar = $('.navbar');
+
+        if (fixbar.length) {
+            if ($(document).scrollTop() > 135) {
+                fixbar.addClass("sticky");
+            } else {
+                fixbar.removeClass("sticky");
+            }
+        }
+    }
+
+
     render() {
         return (
             <>

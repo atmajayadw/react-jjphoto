@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from '../component/Navbar.js'
 import Jumbotron from '../component/Jumbotron.js'
 import About from '../component/About.js'
+import Portfolio from '../component/Portfolio.js'
 
 export default class Home extends Component {
     render() {
@@ -10,6 +11,7 @@ export default class Home extends Component {
                 <Navbar />
                 <Jumbotron />
                 <About />
+                <Portfolio />
             </>
         )
     }
