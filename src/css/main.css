@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 body {
   font-family: 'Cormorant', serif;
   color: #242526;
@@ -7,7 +8,7 @@ body {
 #navbar {
   width: 100vw;
   height: 80px;
-  background: rgba(126, 128, 117, 0.2);
+  background: rgba(126, 128, 117, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +43,7 @@ body {
   display: none;
   width: 50%;
   margin-top: 10px;
+  margin-left: -50px;
 }
 
 #navbar .navbar .links ul {
@@ -106,6 +108,7 @@ body {
   #navbar {
     height: 135px;
     padding-top: 20px;
+    background: rgba(126, 128, 117, 0.2);
   }
   #navbar .navbar {
     -webkit-box-orient: vertical;
@@ -125,10 +128,40 @@ body {
 }
 
 #jumbotron {
-  margin-top: -135px;
+  margin-top: -80px;
   background-color: yellow;
   background-image: url("../assets/img/jumbotron.jpg");
   background-size: cover;
-  background-position: center;
   height: 100vh;
+  background-position-x: 52%;
+}
+
+#jumbotron .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+#jumbotron .container .caption {
+  margin: auto auto 30px auto;
+  border: 2px solid white;
+  padding: 0.3em;
+  background-color: rgba(126, 128, 117, 0.5);
+}
+
+#jumbotron .container .caption h3 {
+  font-size: 3vmax;
+  font-family: 'Caveat', cursive;
+  color: whitesmoke;
+}
+
+@media (min-width: 992px) {
+  #jumbotron {
+    margin-top: -135px;
+    background-position-x: 80%;
+  }
+  #jumbotron .container .caption h3 {
+    font-size: 1.5em;
+  }
 }

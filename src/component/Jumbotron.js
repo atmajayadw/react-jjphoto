@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/main.css'
 
 export default class Jumbotron extends Component {
@@ -6,7 +7,11 @@ export default class Jumbotron extends Component {
         return (
             <>
                 <section id="jumbotron">
-                    {/* <h1>Ini jumbotron</h1> */}
+                    <div className="container">
+                        <span className="caption">
+                            <h3>Because Words Are Not Enough.</h3>
+                        </span>
+                    </div>
                 </section>
             </>
         )
