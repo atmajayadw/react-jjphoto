@@ -15,9 +15,9 @@ export default class Navbar extends Component {
 
         if (fixbar.length) {
             if ($(document).scrollTop() > 135) {
-                fixbar.addClass("sticky");
+                fixbar.addClass("fixed");
             } else {
-                fixbar.removeClass("sticky");
+                fixbar.removeClass("fixed");
             }
         }
     }
@@ -37,6 +37,9 @@ export default class Navbar extends Component {
                                 <ul>
                                     <li><a className="link" href="#Home">Home</a></li>
                                     <li><a className="link" href="#about">About</a></li>
+                                    <li>
+                                        <img id="logo" src={Logo} alt=""></img>
+                                    </li>
                                     <li><a className="link" href="#portfolio">Portfolio</a></li>
                                     <li><a className="link" href="#contact">Contact</a></li>
                                 </ul>

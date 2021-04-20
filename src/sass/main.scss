@@ -29,15 +29,15 @@ body {
         align-items: center;
         position: relative;
 
-        &.sticky {
+        &.fixed {
             position: fixed;
             background: lighten($primaryColor, $amount: 50);
             top: 0;
             left: 0;
             right: 0;
-            -webkit-transition: 1s;
             transition: 1s;
             border-bottom: whitesmoke 2px solid;
+            padding: 0;
         }
 
         .logo img {
@@ -47,23 +47,29 @@ body {
         .links {
             display: none;
             width: 50%;
-            margin-top: 10px;
             margin-left: -50px;
 
             ul {
                 display: flex;
                 justify-content: space-between;
+                margin: 0;
 
                 li {
                     list-style: none;
 
+                    #logo {
+                        width: 70px;
+                        margin-top: 20px;
+                    }
+
                     a {
+                        line-height: 100px;
                         text-decoration: none;
                         color: $textColor;
                         transition: 0.5s;
 
                         &:hover {
-                            color: whitesmoke;
+                            color: rgb(189, 189, 189);
                         }
                     }
                 }
@@ -101,23 +107,19 @@ body {
     }
 
     @media (min-width: 992px) {
-        height: 135px;
-        padding-top: 20px;
+        height: 100px;
         background: rgba($primaryColor, 0.2);
 
         .navbar {
-            // margin-top: 20px;
             flex-direction: column;
 
             .logo img {
-                width: 80px;
+                display: none;
             }
 
             .links {
                 display: block;
             }
-
-
 
             .sidebar {
                 .hamburger {
@@ -226,5 +228,14 @@ body {
         padding: 80px 0;
     }
 
+
+}
+
+#slideshow {
+    padding: 185px 0 80px 0;
+
+    @media (max-width: 992px) {
+        padding: 80px 0;
+    }
 
 }

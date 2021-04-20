@@ -36,7 +36,7 @@ body {
   position: relative;
 }
 
-#navbar .navbar.sticky {
+#navbar .navbar.fixed {
   position: fixed;
   background: #fafafa;
   top: 0;
@@ -45,6 +45,7 @@ body {
   -webkit-transition: 1s;
   transition: 1s;
   border-bottom: whitesmoke 2px solid;
+  padding: 0;
 }
 
 #navbar .navbar .logo img {
@@ -54,7 +55,6 @@ body {
 #navbar .navbar .links {
   display: none;
   width: 50%;
-  margin-top: 10px;
   margin-left: -50px;
 }
 
@@ -65,13 +65,20 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0;
 }
 
 #navbar .navbar .links ul li {
   list-style: none;
 }
 
+#navbar .navbar .links ul li #logo {
+  width: 70px;
+  margin-top: 20px;
+}
+
 #navbar .navbar .links ul li a {
+  line-height: 100px;
   text-decoration: none;
   color: #242526;
   -webkit-transition: 0.5s;
@@ -79,7 +86,7 @@ body {
 }
 
 #navbar .navbar .links ul li a:hover {
-  color: whitesmoke;
+  color: #bdbdbd;
 }
 
 #navbar .navbar .sidebar {
@@ -118,8 +125,7 @@ body {
 
 @media (min-width: 992px) {
   #navbar {
-    height: 135px;
-    padding-top: 20px;
+    height: 100px;
     background: rgba(126, 128, 117, 0.2);
   }
   #navbar .navbar {
@@ -129,7 +135,7 @@ body {
             flex-direction: column;
   }
   #navbar .navbar .logo img {
-    width: 80px;
+    display: none;
   }
   #navbar .navbar .links {
     display: block;
@@ -252,6 +258,16 @@ body {
 
 @media (max-width: 992px) {
   #portfolio {
+    padding: 80px 0;
+  }
+}
+
+#slideshow {
+  padding: 185px 0 80px 0;
+}
+
+@media (max-width: 992px) {
+  #slideshow {
     padding: 80px 0;
   }
 }
