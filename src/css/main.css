@@ -3,6 +3,7 @@
 body {
   font-family: 'Cormorant', serif;
   color: #242526;
+  background-color: rgba(196, 196, 196, 0.1);
 }
 
 #navbar {
@@ -38,14 +39,16 @@ body {
 
 #navbar .navbar.fixed {
   position: fixed;
-  background: #fafafa;
+  background: #e1e2df;
   top: 0;
   left: 0;
   right: 0;
   -webkit-transition: 1s;
   transition: 1s;
   border-bottom: whitesmoke 2px solid;
-  padding: 0;
+  padding: 20px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #navbar .navbar .logo img {
@@ -89,9 +92,53 @@ body {
   color: #bdbdbd;
 }
 
+#navbar .navbar .links ul li .link.active {
+  color: #bdbdbd;
+}
+
 #navbar .navbar .sidebar {
   position: relative;
   z-index: 2;
+}
+
+#navbar .navbar .sidebar .links {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 0%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translate(0, 30);
+          transform: translate(0, 30);
+}
+
+#navbar .navbar .sidebar .links.active {
+  width: 50%;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+#navbar .navbar .sidebar .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 0;
+  background: #e1e2df;
+  height: 100vmax;
 }
 
 #navbar .navbar .sidebar .hamburger {
@@ -123,6 +170,38 @@ body {
   transition: 0.7s;
 }
 
+#navbar .navbar .sidebar .hamburger .line1 {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+#navbar .navbar .sidebar .hamburger .line3 {
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+#navbar .navbar .sidebar .hamburger span.show1 {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+#navbar .navbar .sidebar .hamburger span.show3 {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-transform: rotate(-45deg) translate(0, 0);
+  transform: rotate(-45deg) translate(0, 0);
+  background-color: white;
+}
+
+#navbar .navbar .sidebar .hamburger span.show2 {
+  opacity: 0;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
 @media (min-width: 992px) {
   #navbar {
     height: 100px;
@@ -133,6 +212,17 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #navbar .navbar.fixed {
+    position: fixed;
+    background: #fafafa;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+    border-bottom: whitesmoke 2px solid;
+    padding: 0;
   }
   #navbar .navbar .logo img {
     display: none;
@@ -176,7 +266,7 @@ body {
 
 @media (min-width: 992px) {
   #jumbotron {
-    margin-top: -135px;
+    margin-top: -100px;
     background-position-x: 80%;
   }
   #jumbotron .container .caption h3 {
@@ -216,7 +306,7 @@ body {
 }
 
 #portfolio {
-  padding: 185px 0 80px 0;
+  padding: 100px 0 80px 0;
 }
 
 #portfolio h1 {
@@ -251,9 +341,27 @@ body {
           justify-content: space-between;
 }
 
-#portfolio .thumbnails h3 {
+#portfolio .thumbnails .thumbnail img {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#portfolio .thumbnails .thumbnail img:hover {
+  opacity: 0.8;
+}
+
+#portfolio .thumbnails .thumbnail h3 {
   text-align: center;
   color: #242526;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#portfolio .thumbnails .thumbnail h3:hover {
+  color: #bdbdbd;
 }
 
 @media (max-width: 992px) {
@@ -264,7 +372,7 @@ body {
 
 #slideshow {
   width: 100vw;
-  padding: 185px 0 80px 0;
+  padding: 100px 0 80px 0;
 }
 
 @media (max-width: 992px) {
