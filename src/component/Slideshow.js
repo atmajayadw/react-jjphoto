@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/main.css'
 import { Slide1, Slide2, Slide3, Slide4, Slide5, Slide6 } from '../assets/img/img.js'
 
@@ -49,6 +48,10 @@ export default class Slideshow extends Component {
                         </a>
                     </div>
                 </section>
+
+                <div className="container">
+                    <hr />
+                </div>
             </>
         )
     }

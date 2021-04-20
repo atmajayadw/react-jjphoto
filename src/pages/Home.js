@@ -4,6 +4,7 @@ import Jumbotron from '../component/Jumbotron.js'
 import About from '../component/About.js'
 import Portfolio from '../component/Portfolio.js'
 import Slideshow from '../component/Slideshow.js'
+import Contact from '../component/Contact'
 
 export default class Home extends Component {
     render() {
@@ -14,6 +15,7 @@ export default class Home extends Component {
                 <About />
                 <Portfolio />
                 <Slideshow />
+                <Contact />
             </>
         )
     }
