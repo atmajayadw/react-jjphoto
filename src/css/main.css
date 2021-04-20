@@ -417,3 +417,58 @@ body {
 #contact .container .contact img {
   width: 80px;
 }
+
+#content {
+  padding: 50px 0;
+}
+
+#content h5 {
+  margin-left: 25px;
+}
+
+#content .contents {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#content .contents .content {
+  margin-top: 40px;
+  width: 320px;
+}
+
+#content .contents .content h3 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#detail {
+  padding: 50px 0;
+}
+
+#detail .details {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#detail .details .detail {
+  margin-top: 40px;
+  width: 400px;
+}
+
+#detail .details .detail h3 {
+  margin-top: 10px;
+  text-align: center;
+}

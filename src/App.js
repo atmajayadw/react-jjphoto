@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Home from './pages/Home.js'
+import Portfolio from './pages/Portfolio.js'
+import Content from './pages/Content.js'
 import {
   Switch,
   Route,
@@ -16,6 +18,9 @@ export default class App extends Component {
             <Switch>
               <Route path="/" component={Home} exact />
               {/* <Route path="/photography" component={Photography} exact /> */}
+
+              <Route path="/portfolio" component={Portfolio} exact />
+              <Route path="/portfolio/content" component={Content} exact />
             </Switch>
           </main>
         </BrowserRouter>
