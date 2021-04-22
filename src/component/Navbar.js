@@ -4,6 +4,8 @@ import '../css/main.css'
 import { Logo } from '../assets/icon/icons.js'
 import $ from 'jquery';
 import '../lib/jqueryeasing/jquery.easing.1.3.js'
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Navbar extends Component {
 
@@ -45,22 +47,22 @@ export default class Navbar extends Component {
     }
 
     scrollMenu = () => {
-        $('.link').on('click', function (e) {
+        $('.link').on('click', function () {
 
-            const href = $(this).attr('href');
-            if (href === "#Home") {
+            const href = this.dataset.section
+            const split = href.split('#')[1];
+            const targetDiv = $('#' + split);
+
+            if (href === "#home") {
                 $("html, body").animate({ scrollTop: '0px' }, 1000, 'easeInOutExpo');
-                e.preventDefault();
-            } else {
-                const elementhref = $(href);
+            } else if (targetDiv.length) {
 
                 $('.link').removeClass("active");
                 $(this).addClass("active");
 
                 $("html, body").animate({
-                    scrollTop: elementhref.offset().top - 40
+                    scrollTop: targetDiv.offset().top - 40
                 }, 1000, 'easeInOutExpo');
-                e.preventDefault();
             }
         });
     }
@@ -85,10 +87,13 @@ export default class Navbar extends Component {
             }
         }
 
-        if ($(window).scrollTop() + $(window).height() === $(document).height()) {
-            $(".link").removeClass("active");
-            $(".link.contact").addClass("active");
+        if ($('#contact').length) {
+            if ($(window).scrollTop() + $(window).height() === $(document).height()) {
+                $(".link").removeClass("active");
+                $(".link.contact").addClass("active");
+            }
         }
+
     }
 
     render() {
@@ -103,13 +108,40 @@ export default class Navbar extends Component {
 
                             <div className="links">
                                 <ul>
-                                    <li><a className="link home" href="#Home">Home</a></li>
-                                    <li><a className="link about" href="#about">About</a></li>
+                                    <li>
+                                        <Link className="link home" rel="noopenner noreferrer"
+                                            to={{
+                                                pathname: "/",
+                                                params: "#home"
+                                            }} data-section="#home"> <span>Home</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="link about" rel="noopenner noreferrer"
+                                            to={{
+                                                pathname: "/",
+                                                params: "#about"
+                                            }} data-section="#about"> <span>About</span>
+                                        </Link>
+                                    </li>
                                     <li>
                                         <img id="logo" src={Logo} alt=""></img>
                                     </li>
-                                    <li><a className="link portfolio" href="#portfolio">Portfolio</a></li>
-                                    <li><a className="link contact" href="#contact">Contact</a></li>
+                                    <li>
+                                        <Link className="link portfolio" rel="noopenner noreferrer"
+                                            to={{
+                                                pathname: "/",
+                                                params: "#portfolio"
+                                            }} data-section="#portfolio"> <span>Portfolio</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="link contact" rel="noopenner noreferrer"
+                                            to={{
+                                                pathname: "/",
+                                                params: "#contact"
+                                            }} data-section="#contact"> <span>Contact</span>
+                                        </Link>                                    </li>
                                 </ul>
                             </div>
 
@@ -123,12 +155,42 @@ export default class Navbar extends Component {
 
                                 <div className="links">
                                     <ul>
-                                        <li><a className="link" href="#Home">Home</a></li>
-                                        <li><a className="link" href="#about">About</a></li>
-                                        <li><a className="link" href="#portfolio">Portfolio</a></li>
-                                        <li><a className="link" href="#contact">Contact</a></li>
+                                        <li>
+                                            <Link className="link home" rel="noopenner noreferrer"
+                                                to={{
+                                                    pathname: "/",
+                                                    params: "#home"
+                                                }} data-section="#home"> <span>Home</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link className="link about" rel="noopenner noreferrer"
+                                                to={{
+                                                    pathname: "/",
+                                                    params: "#about"
+                                                }} data-section="#about"> <span>About</span>
+                                            </Link>
+                                        </li>
+
+                                        <li>
+                                            <Link className="link portfolio" rel="noopenner noreferrer"
+                                                to={{
+                                                    pathname: "/",
+                                                    params: "#portfolio"
+                                                }} data-section="#portfolio"> <span>Portfolio</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link className="link contact" rel="noopenner noreferrer"
+                                                to={{
+                                                    pathname: "/",
+                                                    params: "#contact"
+                                                }} data-section="#contact"> <span>Contact</span>
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </div>
+
 
                             </div>
                         </div>

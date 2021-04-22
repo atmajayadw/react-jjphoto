@@ -13,12 +13,9 @@ export default class App extends Component {
     return (
       <>
         <BrowserRouter>
-          {/* <Navbar /> */}
           <main>
             <Switch>
               <Route path="/" component={Home} exact />
-              {/* <Route path="/photography" component={Photography} exact /> */}
-
               <Route path="/portfolio" component={Portfolio} exact />
               <Route path="/portfolio/content" component={Content} exact />
             </Switch>
