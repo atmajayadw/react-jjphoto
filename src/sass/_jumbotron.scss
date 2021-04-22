@@ -1,0 +1,39 @@
+@use 'setup';
+
+#jumbotron {
+
+    margin-top: -80px;
+    background-color: setup.$primaryColor;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position-x: 52%;
+
+    .container {
+        display: flex;
+        height: 100vh;
+
+        .caption {
+            margin: auto auto 30px auto;
+            border: 2px solid white;
+            padding: 0.3em;
+            background-color: rgba(#7E8075, 0.5);
+
+            h3 {
+                font-size: 3vmax;
+                font-family: 'Caveat', cursive;
+                color: whitesmoke;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        margin-top: -100px;
+        background-position-x: 80%;
+
+        .container .caption h3 {
+            font-size: 1.5em;
+        }
+
+    }
+}

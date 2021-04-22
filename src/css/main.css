@@ -370,60 +370,6 @@ body {
   color: #bdbdbd;
 }
 
-#navbar_opt {
-  width: 100vw;
-  height: 80px;
-  background: rgba(126, 128, 117, 0.1);
-  display: flex;
-  align-items: center;
-  z-index: 5;
-  position: relative;
-}
-#navbar_opt .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-#navbar_opt .navbar.fixed {
-  position: fixed;
-  background: #e1e2df;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 1s;
-  border-bottom: whitesmoke 2px solid;
-  padding: 20px 40px;
-  box-sizing: border-box;
-}
-#navbar_opt .navbar .logo img {
-  width: 50px;
-}
-#navbar_opt .navbar .sidebar {
-  position: relative;
-  z-index: 2;
-}
-@media (min-width: 992px) {
-  #navbar_opt {
-    height: 100px;
-    background: rgba(126, 128, 117, 0.2);
-  }
-  #navbar_opt .navbar {
-    flex-direction: column;
-  }
-  #navbar_opt .navbar.fixed {
-    position: fixed;
-    background: #fafafa;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: 1s;
-    border-bottom: whitesmoke 2px solid;
-    padding: 0;
-  }
-}
-
 #modal {
   display: none;
   position: fixed;

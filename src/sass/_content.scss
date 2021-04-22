@@ -1,0 +1,47 @@
+@use 'setup';
+
+#content {
+    padding: 50px 0;
+
+    h5 {
+        margin-left: 25px;
+    }
+
+    .back {
+        text-decoration: none;
+        color: setup.$textColor;
+        transition: 0.5s;
+
+        &:hover {
+            color: rgb(189, 189, 189);
+        }
+    }
+
+    .contents {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .content {
+            margin-top: 40px;
+            width: 320px;
+
+            .btn-detail {
+                text-decoration: none;
+                color: setup.$textColor;
+            }
+
+            h3 {
+                margin-top: 10px;
+                text-align: center;
+                text-decoration: none;
+                transition: 0.5s;
+
+                &:hover {
+                    color: rgb(189, 189, 189);
+                }
+            }
+        }
+    }
+}
