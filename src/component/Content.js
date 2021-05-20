@@ -3,13 +3,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/main.css'
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import $ from 'jquery';
+
+const Loader = () => (
+    <div className="divLoader">
+        <svg className="svgLoader" viewBox="0 0 100 100" width="10em" height="10em">
+            <path stroke="none" d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" fill="#7E8075" transform="rotate(179.719 50 51)">
+                <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 51;360 50 51" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite">
+                </animateTransform>
+            </path>
+        </svg>
+    </div>
+);
 
 export default class Content extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            categories: []
+            categories: [],
+            loading: true
         }
     }
 
@@ -26,10 +39,22 @@ export default class Content extends Component {
             .then(res => {
                 const categories = res.data;
                 this.setState({ categories: categories.data });
+                this.setLoaderOff();
             })
             .catch(error => {
                 console.log(error);
+                this.setLoaderOff();
+                alert('Data Not Found!')
             })
+    }
+
+    setLoaderOff = () => {
+        $('#contentLoader').css(
+            "display", "none"
+        );
+        this.setState({
+            loading: false
+        })
     }
 
     render() {
@@ -59,7 +84,10 @@ export default class Content extends Component {
                             ))}
 
                         </div>
-
+                        <div className="container contentLoader" id="contentLoader">
+                            {this.state.loading ? <Loader /> : null}
+                            <p><i>loading...</i></p>
+                        </div>
 
                     </div>
                 </section>

@@ -44,4 +44,26 @@
             }
         }
     }
+
+    #contentLoader p {
+        text-align: center;
+        margin-top: -40px;
+        font-size: 12px;
+    }
+
+    #contentLoader.container {
+        width: 330px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contentLoader .divLoader {
+        transform: scale(0.4);
+    }
+
+    #contentLoader {
+        display: flex;
+    }
 }

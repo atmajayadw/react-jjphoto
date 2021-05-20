@@ -6,6 +6,7 @@ import Portfolio from '../component/Portfolio.js'
 import Slideshow from '../component/Slideshow.js'
 import Contact from '../component/Contact'
 import $ from 'jquery'
+
 export default class Home extends Component {
     componentDidMount() {
         this.getParams();

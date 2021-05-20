@@ -25,6 +25,15 @@ export default class About extends Component {
                 <div className="container">
                     <hr />
                 </div>
+
+                <section id="parallax1">
+                    <div className="parallax1">
+                    </div>
+                </section>
+
+                <div className="container">
+                    <hr />
+                </div>
             </>
         )
     }

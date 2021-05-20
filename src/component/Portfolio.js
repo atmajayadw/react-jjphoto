@@ -49,6 +49,15 @@ export default class Portfolio extends Component {
                 <div className="container">
                     <hr />
                 </div>
+
+                <section id="parallax2">
+                    <div className="parallax2">
+                    </div>
+                </section>
+
+                <div className="container">
+                    <hr />
+                </div>
             </>
         )
     }
