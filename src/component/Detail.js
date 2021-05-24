@@ -40,7 +40,7 @@ export default class Detail extends Component {
         const authResult = new URLSearchParams(window.location.search);
         const code = authResult.get('id');
 
-        const URL = "http://localhost/jjphoto-rest-server/api/portfolio/";
+        const URL = "https://jjphoto-rest-server.atmajayadw.site/api/portfolio/";
         axios.get(URL, { params: { client_id: code } })
             .then(res => {
                 const result = res.data;
@@ -64,7 +64,7 @@ export default class Detail extends Component {
                 document.body.style.overflow = "hidden";
                 // fixbar.style.display = "none";
                 modal.style.display = "block";
-                modal_img.src = "http://localhost/jjphoto-rest-server/uploads/" + this.alt
+                modal_img.src = "https://jjphoto-rest-server.atmajayadw.site/uploads/" + this.alt
                 if ($('#modal-img').height() > 500) {
                     $('#modal-img').css({
                         'max-width': '400px'
@@ -112,7 +112,7 @@ export default class Detail extends Component {
                         <div className="details">
                             {result.map((res, index) => (
                                 <div className="detail" key={index}>
-                                    <img src={"http://localhost/jjphoto-rest-server/uploads/" + res.photo} alt={res.photo} className="img-fluid" />
+                                    <img src={"https://jjphoto-rest-server.atmajayadw.site/uploads/" + res.photo} alt={res.photo} className="img-fluid" />
                                 </div>
                             ))}
                         </div>

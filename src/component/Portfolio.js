@@ -3,8 +3,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/main.css'
 import { Wedding, PreWedding, Engagement } from '../assets/img/img.js'
 import { Link } from "react-router-dom";
+import $ from 'jquery';
 
 export default class Portfolio extends Component {
+
+    componentDidMount() {
+        window.addEventListener("scroll", this.showPortfolio1);
+    }
+
+    showPortfolio1 = () => {
+        const wScroll = $(window).scrollTop();
+        if ($('#portfolio').length) {
+            if (wScroll > $('#portfolio').offset().top - 120) {
+                $('.thumbnail').each(function (i) {
+                    setTimeout(function () {
+                        $('.thumbnail').eq(i).addClass('show');
+                    }, 500 * (i + 1));
+                });
+            }
+        }
+    }
+
     render() {
         return (
             <>

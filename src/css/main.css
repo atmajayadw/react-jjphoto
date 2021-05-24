@@ -257,6 +257,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.5s;
+  transform: translate(0, -50px);
+  opacity: 0;
 }
 #portfolio .thumbnails .thumbnail .btn-porto {
   text-decoration: none;
@@ -277,6 +280,10 @@ body {
 }
 #portfolio .thumbnails .thumbnail h3:hover {
   color: #bdbdbd;
+}
+#portfolio .thumbnails .thumbnail.show {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 @media (max-width: 992px) {
   #portfolio {

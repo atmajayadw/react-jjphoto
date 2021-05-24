@@ -34,7 +34,7 @@ export default class Content extends Component {
         const authResult = new URLSearchParams(window.location.search);
         const code = authResult.get('category');
 
-        const URL = "http://localhost/jjphoto-rest-server/api/client/";
+        const URL = "https://jjphoto-rest-server.atmajayadw.site/api/client/";
         axios.get(URL, { params: { category: code } })
             .then(res => {
                 const categories = res.data;
@@ -72,7 +72,7 @@ export default class Content extends Component {
                         <div className="contents">
                             {categories.map((category, index) => (
                                 <div className="content" key={index}>
-                                    <img src={"http://localhost/jjphoto-rest-server/uploads/thumbnail/" + category.thumbnail} alt={category.thumbnail} className="img-fluid" />
+                                    <img src={"https://jjphoto-rest-server.atmajayadw.site/uploads/thumbnail/" + category.thumbnail} alt={category.thumbnail} className="img-fluid" />
                                     <Link to={{
                                         pathname: "/portfolio/content/",
                                         search: "?id=" + category.client_id,

@@ -9,14 +9,14 @@ export default class Slideshow extends Component {
         return (
             <>
                 <section id="slideshow">
-                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                    <div id="carousel" className="carousel slide" data-ride="carousel">
                         <ol className="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                            <li data-target="#carousel" data-slide-to="0" className="active"></li>
+                            <li data-target="#carousel" data-slide-to="1"></li>
+                            <li data-target="#carousel" data-slide-to="2"></li>
+                            <li data-target="#carousel" data-slide-to="3"></li>
+                            <li data-target="#carousel" data-slide-to="4"></li>
+                            <li data-target="#carousel" data-slide-to="5"></li>
                         </ol>
                         <div className="carousel-inner">
                             <div className="carousel-item active">
@@ -38,11 +38,11 @@ export default class Slideshow extends Component {
                                 <img className="d-block w-100" src={Slide6} alt="Sixth slide" />
                             </div>
                         </div>
-                        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <a className="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span className="sr-only">Previous</span>
                         </a>
-                        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <a className="carousel-control-next" href="#carousel" role="button" data-slide="next">
                             <span className="carousel-control-next-icon" aria-hidden="true"></span>
                             <span className="sr-only">Next</span>
                         </a>
