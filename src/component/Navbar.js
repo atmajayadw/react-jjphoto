@@ -4,7 +4,6 @@ import '../css/main.css'
 import { Logo } from '../assets/icon/icons.js'
 import $ from 'jquery';
 import '../lib/jqueryeasing/jquery.easing.1.3.js'
-// import { Link } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Navbar extends Component {
